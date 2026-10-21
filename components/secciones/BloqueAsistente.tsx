@@ -14,7 +14,7 @@ type Props = {
   contacto: SiteConfig["contacto"];
   /** Servicio ya decidido: el asistente empieza en el paso 2. */
   servicioFijo?: string;
-  /** Debajo del asistente: «Prefiero escribir directamente» + «o llama al {número}» (solo con WhatsApp). */
+  /** Debajo del asistente: «Escribir por WhatsApp» + «o llama al {número}» (solo con WhatsApp). */
   respaldo?: boolean;
   className?: string;
 };
@@ -45,7 +45,7 @@ export function BloqueAsistente({ servicios, contacto, servicioFijo, respaldo, c
             className={cn(buttonVariants({ variant: "whatsappDirecto" }), "w-auto flex-[1_1_220px]")}
           >
             <MessageCircle aria-hidden="true" strokeWidth={1.5} className="size-5 flex-none" />
-            <span>Prefiero escribir directamente</span>
+            <span>Escribir por WhatsApp</span>
           </BotonWhatsApp>
           <BotonLlamada
             telefono={telefono}

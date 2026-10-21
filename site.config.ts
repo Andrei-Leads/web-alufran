@@ -1,7 +1,7 @@
 // Demo de Alufran Aluminios (ALUFRAN C.B., Leganés) sobre carpinteria-metalica-1 «Medida».
 // Datos: hoja «Alufran · datos» (Drive), ficha de Google y su web actual (alufranaluminios.com).
 // Fotos: las del propietario en su ficha de Google (catalogo.json en andrei-leads-scraper/data/fotos/).
-// DEMO: teléfono y WhatsApp son el móvil de Ysst; seo.indexar sin activar.
+// DEMO con el móvil real del negocio (decisión de Ysst); seo.indexar sin activar.
 // Sin precios, marcas ni acreditaciones: no hay datos validados por el cliente.
 import { defineSiteConfig } from "@andrei-leads/core";
 
@@ -19,8 +19,8 @@ export default defineSiteConfig({
     tipoSchema: ["HomeAndConstructionBusiness"],
   },
   contacto: {
-    telefono: "+34643647915", // DEMO: móvil de Ysst. Real: +34625954888 · fijo +34913418681
-    whatsapp: "+34643647915", // DEMO: móvil de Ysst
+    telefono: "+34625954888", // Móvil del negocio (también fijo +34913418681)
+    whatsapp: "+34625954888", // Su web lo da como contacto; WhatsApp sin comprobar
     email: "aluminios.alufran@gmail.com",
     direccion: { calle: "C. Puerto de Navafría, 32", cp: "28919", ciudad: "Leganés", provincia: "Madrid" },
     horario: [

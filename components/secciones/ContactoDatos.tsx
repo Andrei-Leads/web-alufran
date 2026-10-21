@@ -27,7 +27,7 @@ export function ContactoDatos({ contacto }: Props) {
               className={buttonVariants({ variant: "whatsappDirecto" })}
             >
               <MessageCircle aria-hidden="true" strokeWidth={1.5} className="size-5 flex-none" />
-              <span>Prefiero escribir directamente</span>
+              <span>Escribir por WhatsApp</span>
             </BotonWhatsApp>
           )}
           <BotonLlamada telefono={telefono} className={buttonVariants({ variant: "llamadaSecundaria" })}>

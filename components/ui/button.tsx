@@ -34,6 +34,8 @@ const buttonVariants = cva(base, {
       llamadaCabecera: `${caja} min-h-11 gap-1.5 px-3 text-[15px] font-semibold tabular-nums lg:gap-2 lg:px-3.5 ${contorno}`,
       /* Cabecera sin WhatsApp: el número pasa a relleno primario. */
       llamadaCabeceraPrimaria: `${caja} min-h-11 gap-1.5 px-3 text-[15px] font-semibold tabular-nums lg:gap-2 lg:px-[18px] ${relleno}`,
+      /* «WhatsApp» en la cabecera (desde md; en móvil está la barra inferior). */
+      whatsappCabecera: `${caja} min-h-11 gap-1.5 px-3 text-[15px] font-semibold lg:gap-2 lg:px-3.5 ${contorno}`,
       /* «Pedir presupuesto» en la cabecera (EnlacePresupuesto). */
       presupuestoCabecera: `${caja} min-h-11 px-[18px] text-[15px] font-semibold ${relleno}`,
       /* Barra móvil: 52 px. */

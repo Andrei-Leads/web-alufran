@@ -16,7 +16,7 @@ type Props = {
   servicios: string[];
   /** contacto.whatsapp */
   numero: string;
-  /** Mensaje del botón «Prefiero escribir directamente» (sin JavaScript). */
+  /** Mensaje del botón «Escribir por WhatsApp» (sin JavaScript). */
   mensajeDirecto: string;
   /** Servicio ya decidido (p. ej. la página /servicios/[slug]): el asistente empieza en el paso 2. */
   servicioFijo?: string;
@@ -44,7 +44,7 @@ const enServidor = () => false;
  * La celda mide lo que la vista más alta, a cualquier ancho, sin medir con JS ni estimar filas.
  * El resumen "fantasma" usa los valores más largos para que el salto de línea no cambie la altura.
  *
- * Sin JavaScript: el servidor pinta el título y «Prefiero escribir directamente» sobre esa misma
+ * Sin JavaScript: el servidor pinta el título y «Escribir por WhatsApp» sobre esa misma
  * celda (las vistas, invisibles, reservan el hueco). Al montar, el botón se retira y aparece el paso 1.
  */
 export function Asistente({ servicios, numero, mensajeDirecto, servicioFijo }: Props) {
@@ -172,7 +172,7 @@ export function Asistente({ servicios, numero, mensajeDirecto, servicioFijo }: P
               className={buttonVariants({ variant: "whatsappDirecto" })}
             >
               <MessageCircle aria-hidden="true" strokeWidth={1.5} className="size-5 flex-none" />
-              <span>Prefiero escribir directamente</span>
+              <span>Escribir por WhatsApp</span>
             </BotonWhatsApp>
           </div>
         )}

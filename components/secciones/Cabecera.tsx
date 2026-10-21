@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BotonLlamada, type Imagen } from "@andrei-leads/core";
-import { Phone } from "lucide-react";
+import { BotonLlamada, BotonWhatsApp, type Imagen } from "@andrei-leads/core";
+import { MessageCircle, Phone } from "lucide-react";
 
 import { EnlacePresupuesto } from "@/components/EnlacePresupuesto";
 import { buttonVariants } from "@/components/ui/button";
@@ -14,15 +14,17 @@ type Props = {
   logo?: Imagen;
   telefono: string;
   whatsapp?: string;
+  mensajeWhatsapp: string;
   items: Ancla[];
 };
 
 /**
  * Cabecera sticky. Un único enlace a «/» con el logo (opcional) a la izquierda del nombre.
- * Móvil y tableta: nombre + «Llamar» + menú (+ «Pedir presupuesto» desde 768 px).
- * Escritorio (lg): enlaces del menú + «Pedir presupuesto» + número.
+ * Móvil: nombre + «Llamar» + menú (WhatsApp va en la barra inferior).
+ * Tableta (md): + «Pedir presupuesto» + «WhatsApp».
+ * Escritorio (lg): enlaces del menú + «Pedir presupuesto» + «WhatsApp» + número.
  */
-export function Cabecera({ nombre, logo, telefono, whatsapp, items }: Props) {
+export function Cabecera({ nombre, logo, telefono, whatsapp, mensajeWhatsapp, items }: Props) {
   // Nombre largo: en móvil (< 640 px) «Llamar» queda solo con el icono (texto sr-only)
   // para que el nombre quepa en 2 líneas y no empuje el asistente bajo la barra.
   const nombreLargo = nombre.length > 24;
@@ -63,6 +65,16 @@ export function Cabecera({ nombre, logo, telefono, whatsapp, items }: Props) {
           >
             Pedir presupuesto
           </EnlacePresupuesto>
+        )}
+        {whatsapp && (
+          <BotonWhatsApp
+            numero={whatsapp}
+            mensaje={mensajeWhatsapp}
+            className={cn(buttonVariants({ variant: "whatsappCabecera" }), "hidden md:inline-flex")}
+          >
+            <MessageCircle aria-hidden="true" strokeWidth={1.5} className="size-[18px] flex-none" />
+            <span>WhatsApp</span>
+          </BotonWhatsApp>
         )}
         <BotonLlamada
           telefono={telefono}

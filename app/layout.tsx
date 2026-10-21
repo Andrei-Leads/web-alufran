@@ -46,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           logo={config.negocio.logo}
           telefono={config.contacto.telefono}
           whatsapp={config.contacto.whatsapp}
+          mensajeWhatsapp={mensajeGeneral(config.contacto)}
           items={items}
         />
         <main className="flex-1">{children}</main>

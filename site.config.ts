@@ -15,7 +15,6 @@ export default defineSiteConfig({
     sector: "Carpintería de aluminio",
     descripcionCorta:
       "Ventanas, cerramientos, puertas, rejas y armarios de aluminio a medida. Taller propio y más de 25 años de oficio.",
-    anioFundacion: 2008,
     tipoSchema: ["HomeAndConstructionBusiness"],
   },
   contacto: {
@@ -115,6 +114,10 @@ export default defineSiteConfig({
         "También convertimos ventanas de apertura normal en oscilobatientes, para ventilar sin abrirlas del todo.",
       ],
       incluye: ["Cambio de rodamientos", "Ajuste de puertas y ventanas", "Conversión a oscilobatiente", "Mantenimiento"],
+      imagenes: [
+        { src: "/ejemplo/servicio-vidrio.jpg", alt: "Operario con guantes colocando un vidrio en una ventana de aluminio" },
+        { src: "/ejemplo/servicio-oscilobatiente.jpg", alt: "Ventana oscilobatiente blanca abierta para ventilar" },
+      ],
       preguntas: [
         {
           pregunta: "¿Merece la pena reparar una ventana antigua?",
@@ -133,6 +136,7 @@ export default defineSiteConfig({
     {
       titulo: "Mamparas de baño",
       descripcion: "Mamparas para ducha y bañera con cristal de seguridad y perfilería de calidad.",
+      imagenes: [{ src: "/ejemplo/cat-mamparas.jpg", alt: "Mampara de ducha de cristal con perfil negro" }],
     },
   ],
   trabajos: [
@@ -239,6 +243,8 @@ export default defineSiteConfig({
     imagenes: [
       { src: f("043-cerramiento-acristalado-blanco-preparado-en-el"), alt: "Cerramiento de aluminio blanco y vidrio preparado en el taller de Alufran" },
       { src: f("010-operario-instalando-ventanas-en-un-aula-o-una"), alt: "Operario de Alufran montando ventanas de aluminio" },
+      { src: "/ejemplo/empresa-perfiles.jpg", alt: "Perfiles de aluminio y PVC apilados por colores" },
+      { src: "/ejemplo/empresa-taller.jpg", alt: "Banco de taller con perfiles de aluminio y herramientas" },
     ],
     equipo: [{ nombre: "Javier" }],
   },
